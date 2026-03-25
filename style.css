@@ -1,40 +1,80 @@
- body {
+body {
       font-family: Arial, sans-serif;
-      padding: 20px;
       background: #111827;
       color: white;
+      padding: 30px;
     }
 
-    input, button {
+    .app {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    input[type="text"] {
+      flex: 1;
       padding: 10px;
-      margin: 5px;
-      border-radius: 6px;
       border: none;
+      border-radius: 8px;
+      outline: none;
     }
 
     button {
+      padding: 10px 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
       background: #3b82f6;
       color: white;
-      cursor: pointer;
+    }
+
+    #clearCompletedBtn {
+      margin-bottom: 15px;
+      background: #ef4444;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
     }
 
     li {
-      margin: 10px 0;
-      list-style: none;
-      background: #1f2937;
-      padding: 10px;
-      border-radius: 6px;
       display: flex;
       align-items: center;
       gap: 10px;
+      background: #1f2937;
+      padding: 12px;
+      border-radius: 10px;
+      margin-bottom: 10px;
     }
 
-    .completed {
+    li span {
+      flex: 1;
+      cursor: pointer;
+    }
+
+    li.completed span {
       text-decoration: line-through;
       opacity: 0.6;
     }
 
     .delete {
-      margin-left: auto;
-      background: red;
+      background: #ef4444;
+    }
+
+    .edit-input {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      border-radius: 6px;
+      outline: none;
     }
