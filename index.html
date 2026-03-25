@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App Pro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <input type="text" id="taskInput" placeholder="Enter task">
-    <button id="addBtn">Add</button>
+  <div class="app">
+    <div class="header">
+      <h1>Todo App Pro</h1>
+      <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
 
-    <button id="clearCompletedBtn">Clear Completed</button>
+    <div class="input-row">
+      <input type="text" id="taskInput" placeholder="Enter a new task..." />
+      <button id="addBtn" class="btn btn-primary">Add</button>
+    </div>
 
-    <ul id="taskList">
-        
-    </ul>
-<script src="index.js"></script>
+    <div class="toolbar">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+      <div class="actions">
+        <button id="clearCompletedBtn" class="btn btn-warning">Clear Done</button>
+        <button id="deleteAllBtn" class="btn btn-danger">Delete All</button>
+      </div>
+    </div>
+
+    <div class="stats">
+      <span id="tasksCount">0</span> task(s) left
+    </div>
+
+    <ul id="taskList"></ul>
+    <p class="empty" id="emptyMessage">No tasks yet. Add one above!</p>
+  </div>
+  <script src="index.js"></script>
 </body>
 </html>
